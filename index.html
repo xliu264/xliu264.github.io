@@ -12,15 +12,16 @@
             background-color: #f4f4f4;
         }
         header {
-            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             padding: 20px;
-            background-color: white;
-            color: black;
+            background-color: #4CAF50;
+            color: white;
         }
         img {
             max-width: 150px;
             border-radius: 50%;
-            margin: 20px 0;
         }
         section {
             margin: 20px 0;
@@ -40,11 +41,11 @@
 <body>
 
 <header>
-    <img src="your-photo-url.jpg" alt="Your Name">
     <div>
         <h1>Your Name</h1>
         <p>Your Title (e.g., Medical Student, Researcher)</p>
     </div>
+    <img src="your-photo-url.jpg" alt="Your Name">
 </header>
 
 <section id="about">
