@@ -30,6 +30,7 @@
         .skip-link:focus { top: 8px; }
         .research-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
         .research-grid article { padding-left: 14px; border-left: 3px solid #d5e6da; }
+        .degree + .degree { margin-top: 24px; padding-top: 20px; border-top: 1px solid #d5e6da; }
         .publication { padding-left: 18px; border-left: 3px solid var(--accent); }
         .muted, footer { color: #526158; }
         ul { padding-left: 22px; margin: 8px 0 0; }
@@ -71,15 +72,31 @@
     <main id="main">
         <section id="about" aria-labelledby="about-title">
             <h2 id="about-title">About Me</h2>
-            <p>I am currently a fourth-year student at the University of Iowa, working with Professor Kasturi Varadarajan. My research focuses on algorithm theory and the design and analysis of relational algorithms for computational geometry problems.</p>
-            <!-- Update your year and add your degree program here when appropriate. -->
+            <p>I am currently a fourth-year PhD student at the University of Iowa, working with Professor Kasturi Varadarajan. My research focuses on algorithm theory and the design and analysis of relational algorithms for computational geometry problems, including subspace approximation and clustering problems.</p>
+            <!-- Update your year as needed. -->
         </section>
         <section id="education" aria-labelledby="education-title">
             <h2 id="education-title">Education</h2>
-            <h3>University of Iowa</h3>
-            <p>Research advisor: Professor Kasturi Varadarajan</p>
-            <!-- Add your degree program, enrollment dates, expected graduation year,
-            and any previous degrees once those details are available. -->
+            <!-- Replace the bracketed placeholders with your degree details. -->
+            <article class="degree">
+                <h3>Doctor of Philosophy (PhD) in Computer Science</h3>
+                <p><strong>University of Iowa</strong></p>
+                <p class="muted">2023 &ndash; Present | In progress</p>
+                <p>Expected graduation: 2028</p>
+                <p>Research advisor: Professor Kasturi Varadarajan</p>
+            </article>
+            <article class="degree">
+                <h3>Master's Degree in Computer Science</h3>
+                <p><strong>University of Iowa</strong></p>
+                <p class="muted">2021 &ndash; 2023</p>
+                <!-- Replace "Master's Degree" with your exact degree title, such as Master of Science. -->
+            </article>
+            <article class="degree">
+                <h3>Bachelor's Degree in Computer Science</h3>
+                <p><strong>Central University of Finance and Economics</strong></p>
+                <p class="muted">2016 &ndash; 2020</p>
+                <!-- Replace "Bachelor's Degree" with your exact degree title, such as Bachelor of Science. -->
+            </article>
         </section>
         <section id="research-interests" aria-labelledby="research-title">
             <h2 id="research-title">Research Interests</h2>
