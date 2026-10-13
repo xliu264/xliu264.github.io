@@ -1,115 +1,143 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Xiang Liu at the University of Iowa. Research in algorithm theory, relational algorithms, subspace approximation, and computational geometry.">
     <title>Xiang Liu - Personal Website</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
+        :root { color-scheme: light; --accent: #21623c; --ink: #24312b; }
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 24px; background: #f4f6f4; color: var(--ink); line-height: 1.65; }
+        .container { max-width: 960px; margin: auto; }
+        header { display: flex; justify-content: space-between; align-items: center; gap: 32px; padding: 32px; background: white; border-top: 5px solid var(--accent); border-radius: 8px; }
+        h1 { font-size: clamp(2rem, 5vw, 3rem); margin: 0 0 8px; line-height: 1.2; }
+        header p { margin: 4px 0; }
+        .portrait { width: 150px; height: 150px; object-fit: cover; border-radius: 50%; flex-shrink: 0; }
+        nav { display: flex; flex-wrap: wrap; gap: 8px 20px; padding: 18px 4px; }
+        nav a { font-weight: bold; text-decoration: none; }
+        section { margin: 0 0 20px; padding: 28px 32px; background: white; border-radius: 8px; box-shadow: 0 2px 5px rgb(0 0 0 / 5%); }
+        h2 { margin: 0 0 16px; font-size: 1.5rem; }
+        h3 { margin: 0 0 8px; font-size: 1.08rem; }
+        p { margin: 0 0 12px; }
+        p:last-child { margin-bottom: 0; }
+        a { color: var(--accent); overflow-wrap: anywhere; text-underline-offset: 3px; }
+        a:hover { text-decoration: underline; }
+        a:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+        .button { display: inline-block; background: var(--accent); color: white; padding: 8px 16px; border-radius: 5px; text-decoration: none; margin-top: 14px; }
+        .skip-link { position: absolute; left: 24px; top: -100px; padding: 10px; background: white; z-index: 1; }
+        .skip-link:focus { top: 8px; }
+        .research-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .research-grid article { padding-left: 14px; border-left: 3px solid #d5e6da; }
+        .publication { padding-left: 18px; border-left: 3px solid var(--accent); }
+        .muted, footer { color: #526158; }
+        ul { padding-left: 22px; margin: 8px 0 0; }
+        li { margin-bottom: 8px; }
+        footer { padding: 8px 4px 24px; font-size: 0.9rem; }
+        @media (max-width: 640px) {
+            body { padding: 16px; }
+            header { flex-direction: column-reverse; align-items: flex-start; gap: 20px; padding: 24px; }
+            section { padding: 24px; }
+            .portrait { width: 120px; height: 120px; }
+            .research-grid { grid-template-columns: 1fr; }
         }
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            background-color: white;
-            color: black;
-        }
-        img {
-            max-width: 150px;
-            border-radius: 50%;
-            float:right;
-        }
-        section {
-            margin: 20px 0;
-            padding: 20px;
-            background-color: white;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
-            color: #333;
-        }
-        a {
-            color: #4CAF50;
-        }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
     </style>
 </head>
 <body>
-
-<header>
-    <div>
-        <h1>Xiang Liu</h1>
-        <p>University of Iowa</p>
-        <p>Supervised by Professor Kasturi Varadarajan</p>
-    </div>
-    <img src="photo.jpg" alt="Your Name">
-</header>
-
-<section id="about">
-    <h2>About Me</h2>
-    <p>I am currently a fourth year student in the University of Iowa. I am working with Professor Kasturi Varadarajan. My research work is about Algorithm Theory and currently I am working on design and analysis of relational algorithms for computational geometry problems.</p>
-</section>
-
-<!--<section id="education">
-    <h2>Education</h2>
-    <ul>
-        <li><strong>Doctor of Medicine</strong> - University Name, Expected Graduation Year</li>
-        <li><strong>Bachelor of Science in Biology</strong> - University Name, Year</li>
-    </ul>
-</section>-->
-
-<section id="research-interests">
-    <h2>Research Interests</h2>
-    <ul>
-        <li>Relational Algorithm</li>
-        <li>Subspace Approximation Algorithm</li>
-        <li>Computational Geometry</li>
-    </ul>
-</section>
-
-<section id="experience">
-    <h2>Teaching Assistantship</h2>
-    <h3>Graduate Level Courses</h3>
-    <p>Database Systems: Fall 2024</p>
-    <p>Design and Implementation of Algorithms: Fall 2023, Fall 2025</p>
-    <p>Foundations of Embedded Systems: Fall 2026</p>
-    <!--<p>Description of your responsibilities and achievements.</p>-->
-    
-    <h3>Undergraduate Level Courses</h3>
-    <p>Data Structure: Spring 2022, Fall 2023, Summer 2024, Spring 2025, Summer 2025, Spring 2026, Summer 2026</p>
-    <p>Data Analysis for Informatics: Spring 2022, Spring 2024</p>
-</section>
-
-<section id="publications">
-    <h2>Publications</h2>
-    <ul>
-        <li>Xiang Liu and Kasturi Varadarajan, <em>Relational Approximations for Subspace Primitives</em> - <a href = "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.APPROX/RANDOM.2025.12">APPROX 2025</a></li>
-        
-    </ul>
-</section>
-
-<section id="contact">
-    <h2>Contact</h2>
-    <p>Feel free to reach out via:</p>
-    <ul>
-        <li>Email: <a href="mailto:xiang-liu@uiowa.edu">xiang-liu@uiowa.edu</a></li>
-        <li>LinkedIn: <a href="https://www.linkedin.com/in/xiang-liu-643713220/">My LinkedIn</a></li>
-        <!--<li>Twitter: <a href="https://twitter.com/yourhandle">Your Twitter Handle</a></li>-->
-    </ul>
-</section>
-
-<!--<section id="additional-links">
-    <h2>Additional Links</h2>
-    <ul>
-        <li><a href="https://yourblogorportfolio.com">Personal Blog/Portfolio</a></li>
-        <li><a href="https://otherlink.com">Any other relevant links</a></li>
-    </ul>
-</section>-->
-
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="container">
+    <header>
+        <div>
+            <h1>Xiang Liu</h1>
+            <p>University of Iowa</p>
+            <p>Supervised by Professor Kasturi Varadarajan</p>
+            <a class="button" href="mailto:xiang-liu@uiowa.edu?subject=CV%20request">Request CV</a>
+            <!-- When your CV is available, replace the link above with:
+            <a class="button" href="cv.pdf" download>Download CV</a>
+            and add cv.pdf to this directory. -->
+        </div>
+        <img class="portrait" src="photo.jpg" alt="Xiang Liu" width="150" height="150">
+    </header>
+    <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#research-interests">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#experience">Teaching</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <main id="main">
+        <section id="about" aria-labelledby="about-title">
+            <h2 id="about-title">About Me</h2>
+            <p>I am currently a fourth-year student at the University of Iowa, working with Professor Kasturi Varadarajan. My research focuses on algorithm theory and the design and analysis of relational algorithms for computational geometry problems.</p>
+            <!-- Update your year and add your degree program here when appropriate. -->
+        </section>
+        <section id="education" aria-labelledby="education-title">
+            <h2 id="education-title">Education</h2>
+            <h3>University of Iowa</h3>
+            <p>Research advisor: Professor Kasturi Varadarajan</p>
+            <!-- Add your degree program, enrollment dates, expected graduation year,
+            and any previous degrees once those details are available. -->
+        </section>
+        <section id="research-interests" aria-labelledby="research-title">
+            <h2 id="research-title">Research Interests</h2>
+            <div class="research-grid">
+                <article>
+                    <h3>Relational Algorithms</h3>
+                    <p>Design and analysis of relational algorithms for computational geometry problems.</p>
+                </article>
+                <article>
+                    <h3>Subspace Approximation</h3>
+                    <p>My interests include subspace approximation algorithms, with related work listed below.</p>
+                </article>
+                <article>
+                    <h3>Computational Geometry</h3>
+                    <p>Geometric problems studied through the lens of algorithm theory.</p>
+                </article>
+            </div>
+            <!-- Add project-specific contributions and results when available. -->
+        </section>
+        <section id="publications" aria-labelledby="publications-title">
+            <h2 id="publications-title">Publications</h2>
+            <article class="publication">
+                <h3>Relational Approximations for Subspace Primitives</h3>
+                <p>Xiang Liu and Kasturi Varadarajan</p>
+                <p class="muted">APPROX 2025</p>
+                <a href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.APPROX/RANDOM.2025.12">Read publication on Dagstuhl DROPS</a>
+                <!-- Add verified PDF, slides, code links, and a result summary here. -->
+            </article>
+        </section>
+        <section id="experience" aria-labelledby="teaching-title">
+            <h2 id="teaching-title">Teaching Assistantship</h2>
+            <h3>Graduate Level Courses</h3>
+            <ul>
+                <li><strong>Database Systems:</strong> Fall 2024</li>
+                <li><strong>Design and Implementation of Algorithms:</strong> Fall 2023, Fall 2025</li>
+                <li><strong>Foundations of Embedded Systems:</strong> Fall 2026</li>
+            </ul>
+            <h3>Undergraduate Level Courses</h3>
+            <ul>
+                <li><strong>Data Structure:</strong> Spring 2022, Fall 2023, Summer 2024, Spring 2025, Summer 2025, Spring 2026, Summer 2026</li>
+                <li><strong>Data Analysis for Informatics:</strong> Spring 2022, Spring 2024</li>
+            </ul>
+        </section>
+        <!-- When presentation details are available, add a Talks section here
+        with each talk's title, event, date, and slides link, plus a navigation link. -->
+        <section id="contact" aria-labelledby="contact-title">
+            <h2 id="contact-title">Contact</h2>
+            <p>Feel free to reach out about my research or academic work.</p>
+            <ul>
+                <li>Email: <a href="mailto:xiang-liu@uiowa.edu">xiang-liu@uiowa.edu</a></li>
+                <li><a href="https://www.linkedin.com/in/xiang-liu-643713220/">LinkedIn profile</a></li>
+            </ul>
+            <!-- Add your verified Google Scholar, ORCID, and GitHub profile URLs here. -->
+        </section>
+    </main>
+    <footer>
+        <p>Last updated: <time datetime="2026-10-13">October 13, 2026</time></p>
+    </footer>
+</div>
 </body>
 </html>
